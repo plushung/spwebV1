@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.3.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+
+<bean id="sqlt1" class="sqltest.sqlt">
+ </bean>
+<!--  <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"
+  p:driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+  p:url="jdbc:sqlserver://localhost:49183;DatabaseName=UserManager"
+  p:username="plus"
+  p:password="123456"
+  p:maxIdle="2"
+  p:initialSize="3"
+  p:maxTotal="6">
+  </bean> -->
+<bean id="sqlt0" class="sqltest.sqlt" primary="true">
+ </bean>
+  
+
+</beans>

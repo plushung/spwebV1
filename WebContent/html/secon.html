@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<header>
+		<div align="center">
+			<font face="华文彩云" size="14" color="blue">
+			register</font>
+		</div>
+	</header>
+<!-- head head head head head head head head -->	
+	<nav>
+		
+	</nav>
+<!-- nav nav nav nav nav nav nav nav nav nav -->
+	<article>
+		<section>
+		<form action="/spweb/register.do" method="post">
+			<table>
+				<tbody>
+				<tr><th>姓名</th><td><input type="text" name="name" required="required"></td></tr>
+				<tr><th>密码</th><td><input id="pa" type="password" name="pass" required="required"></td></tr>
+				<tr><th>确认密码</th><td><input id="pa1" type="password" name="pass1" required="required"></td></tr>		
+				<tr><th>性别</th><td><input type="radio" name="sex" value="man">男<input type="radio" name="sex" value="woman">女</td></tr>	
+				<tr><td><input id='sub' type="submit" checked="checked" ></td></tr>
+				</tbody>
+			</table>
+		</form>
+		</section>
+		<section >
+
+		</section>
+	</article>
+<!-- article article article article article article -->
+	<aside>
+	
+	</aside>
+<!-- aside aside aside aside aside aside aside -->
+	<footer>
+	
+	</footer>
+<!-- footer footer footer footer footer footer footer -->
+<script type="text/javascript">
+	var sub=document.getElementById("sub");
+	var paa=document.getElementById("pa");
+	var paa1=document.getElementById("pa1");
+	paa.addEventListener("change",checkPass);
+	paa1.addEventListener("change",checkPass);
+	function checkPass(){
+		var pa=document.getElementById("pa").value;
+		var pa1=document.getElementById("pa1").value;
+		if((pa==pa1)&&(pa!="")){
+			sub.disabled="";
+		}else{
+			sub.disabled="disabled";
+		}
+	}
+</script>
+</body>
+</html>
